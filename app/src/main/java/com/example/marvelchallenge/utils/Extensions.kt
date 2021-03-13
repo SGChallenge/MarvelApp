@@ -31,21 +31,15 @@ fun Event.asExpandableEvent() = ExpandableEvent(id, title, start, end, thumbnail
 
 fun String.toMD5(): String {
     val md5 = "MD5"
-    return try {
-        val digest: MessageDigest = MessageDigest
-            .getInstance(md5)
-        digest.update(this.toByteArray())
-        val messageDigest: ByteArray = digest.digest()
+    val digest: MessageDigest = MessageDigest.getInstance(md5)
+    digest.update(this.toByteArray())
+    val messageDigest: ByteArray = digest.digest()
 
-        val hexString = StringBuilder()
-        for (aMessageDigest in messageDigest) {
-            var h = Integer.toHexString(0xFF and aMessageDigest.toInt())
-            while (h.length < 2) h = "0$h"
-            hexString.append(h)
-        }
-        hexString.toString()
-    } catch (e: Exception) {
-        e.printStackTrace()
-        ""
+    val hexString = StringBuilder()
+    for (aMessageDigest in messageDigest) {
+        var h = Integer.toHexString(0xFF and aMessageDigest.toInt())
+        while (h.length < 2) h = "0$h"
+        hexString.append(h)
     }
+    return hexString.toString()
 }

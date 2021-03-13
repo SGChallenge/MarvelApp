@@ -1,6 +1,5 @@
 package com.example.marvelchallenge.data.di
 
-import com.example.marvelchallenge.BuildConfig
 import com.example.marvelchallenge.data.networking.FlowCallAdapterFactory
 import com.example.marvelchallenge.data.networking.MarvelService
 import dagger.Module

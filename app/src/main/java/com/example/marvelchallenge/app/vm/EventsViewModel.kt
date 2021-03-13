@@ -25,7 +25,7 @@ class EventsViewModel @Inject constructor(useCase: EventsListUseCase) : ViewMode
         }
     }
 
-    val loading = eventList.map { it.status == Status.LOADING }
+    val loading: LiveData<Boolean> = eventList.map { it.status == Status.LOADING }
 
     private val expandedEvents: MutableLiveData<List<String>> = MutableLiveData<List<String>>()
 

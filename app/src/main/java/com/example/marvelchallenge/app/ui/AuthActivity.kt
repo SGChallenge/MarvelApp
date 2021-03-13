@@ -27,15 +27,13 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fui_activity_register_email)
 
-        val providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
-
         if (Firebase.auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
         } else {
             authContract.launch(
                 AuthUI.getInstance()
                     .createSignInIntentBuilder()
-                    .setAvailableProviders(providers)
+                    .setAvailableProviders(listOf(AuthUI.IdpConfig.EmailBuilder().build()))
                     .build()
             )
         }

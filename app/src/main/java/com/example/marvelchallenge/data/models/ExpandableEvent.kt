@@ -10,5 +10,5 @@ data class ExpandableEvent(
     val end: String?,
     val thumbnail: Thumbnail,
     val comics: ItemContainer?,
-    var isExpanded: Boolean
+    val isExpanded: Boolean
 )
