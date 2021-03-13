@@ -1,5 +1,6 @@
 package com.example.marvelchallenge.app.ui
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -13,14 +14,16 @@ import com.example.marvelchallenge.R
 import com.example.marvelchallenge.domain.model.Character
 import com.example.marvelchallenge.domain.model.CharacterPaged
 import com.example.marvelchallenge.utils.SQUARE_LARGE
-import com.example.marvelchallenge.utils.inflate
 import com.example.marvelchallenge.utils.loadFromUrl
 
 class CharactersAdapter(private val navController: NavController) :
     PagingDataAdapter<CharacterPaged, CharactersAdapter.ViewHolder>(CharacterDiffCallBack) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(parent.inflate(R.layout.list_item_character))
+        ViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.list_item_character, parent, false)
+        )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         getItem(position)?.character?.let { item ->

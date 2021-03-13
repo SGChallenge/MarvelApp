@@ -1,10 +1,6 @@
 package com.example.marvelchallenge.utils
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.annotation.LayoutRes
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.marvelchallenge.data.models.ExpandableEvent
@@ -13,11 +9,7 @@ import com.example.marvelchallenge.domain.model.Thumbnail
 import java.security.MessageDigest
 import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.util.Locale
-
-fun ViewGroup.inflate(@LayoutRes layout: Int, attachToRoot: Boolean = false): View {
-    return LayoutInflater.from(context).inflate(layout, this, attachToRoot)
-}
+import java.util.*
 
 fun ImageView.loadFromUrl(imageSize: String, thumbnail: Thumbnail) {
     Glide.with(this)
