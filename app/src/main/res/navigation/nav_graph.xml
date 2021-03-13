@@ -25,5 +25,9 @@
     <fragment
         android:id="@+id/characterFragment"
         android:name="com.example.marvelchallenge.app.ui.CharacterFragment"
-        android:label="CharacterFragment" />
+        android:label="CharacterFragment" >
+        <argument
+            android:name="characterId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

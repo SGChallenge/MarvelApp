@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -30,8 +29,8 @@ class CharactersAdapter(private val navController: NavController) :
             holder.bind(item)
             holder.itemView.setOnClickListener {
                 navController.navigate(
-                    R.id.action_characters_fragment_to_characterFragment,
-                    bundleOf(CharacterFragment.EXTRA_CHARACTER_ID to item.id)
+                    CharactersFragmentDirections
+                        .actionCharactersFragmentToCharacterFragment(item.id)
                 )
             }
         }

@@ -9,6 +9,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.marvelchallenge.R
@@ -43,7 +44,9 @@ class CharacterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val viewModel by viewModels<CharacterViewModel>()
 
-        viewModel.setCharacterId(checkNotNull(requireArguments().getInt(EXTRA_CHARACTER_ID)))
+        val args: CharacterFragmentArgs by navArgs()
+
+        viewModel.setCharacterId(args.characterId)
 
         val comicLayoutList = listOf(
             binding.lytComic1,
@@ -73,9 +76,5 @@ class CharacterFragment : Fragment() {
                 }
             }
         }
-    }
-
-    companion object {
-        const val EXTRA_CHARACTER_ID = "character_id"
     }
 }

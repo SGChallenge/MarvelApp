@@ -17,6 +17,7 @@ class AuthActivity : AppCompatActivity() {
             if (result.resultCode == Activity.RESULT_OK) {
                 result.data?.let {
                     startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 }
             } else {
                 finish()
@@ -29,6 +30,7 @@ class AuthActivity : AppCompatActivity() {
 
         if (Firebase.auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         } else {
             authContract.launch(
                 AuthUI.getInstance()

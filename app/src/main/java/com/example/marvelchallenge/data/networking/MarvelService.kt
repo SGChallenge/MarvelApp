@@ -10,14 +10,14 @@ import retrofit2.http.Query
 
 @OptIn(ExperimentalCoroutinesApi::class)
 interface MarvelService {
-    @GET("characters?orderBy=name&limit=15&apikey=${BuildConfig.API_KEY}")
+    @GET("characters?orderBy=name&limit=15")
     suspend fun getPagedCharacters(
         @Query("ts") ts: Long,
         @Query("offset") offset: Int,
         @Query("hash") hash: String
     ): ObjectContainer<Character>
 
-    @GET("events?orderBy=startDate&limit=25&apikey=${BuildConfig.API_KEY}")
+    @GET("events?orderBy=startDate&limit=25")
     suspend fun getEvents(
         @Query("ts") ts: Long,
         @Query("hash") hash: String
