@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Marvel Challenge</string>
+    <string name="character_image_content_description">Marvel character</string>
+    <string name="event_image_content_description">Marvel event</string>
+    <string name="ic_arrow_event">Collapsing Icon</string>
+    <string name="characters">Characters</string>
+    <string name="events">Events</string>
+    <string name="comics_to_discuss">Comics to discuss</string>
+    <string name="comic_appearances">Comics appearances</string>
+
+</resources>

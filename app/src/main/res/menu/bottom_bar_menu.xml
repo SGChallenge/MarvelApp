@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/characters_fragment"
+        android:icon="@drawable/selector_superhero"
+        android:title="@string/characters" />
+    <item
+        android:id="@+id/events_fragment"
+        android:icon="@drawable/selector_event"
+        android:title="@string/events" />
+</menu>

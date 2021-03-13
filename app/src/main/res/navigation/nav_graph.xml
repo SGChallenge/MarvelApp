@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/characters_fragment">
+    <fragment
+        android:id="@+id/characters_fragment"
+        android:name="com.example.marvelchallenge.app.ui.CharactersFragment"
+        android:label="@string/characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_characters_fragment_to_characterFragment"
+            app:destination="@id/characterFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/events_fragment"
+        android:name="com.example.marvelchallenge.app.ui.EventsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.marvelchallenge.app.ui.CharacterFragment"
+        android:label="CharacterFragment" />
+</navigation>

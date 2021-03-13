@@ -1,0 +1,10 @@
+.idea/modules.xml
+.idea/misc.xml
+.idea/Movies.iml
+.idea/vcs.xml
+.idea/
+*.lock
+*.bin
+*.properties
+*.ser
+*.iml

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1400559087",
+    "project_id": "marvelchallenge-110b5",
+    "storage_bucket": "marvelchallenge-110b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1400559087:android:28cd2b2ca847b6c60ad21a",
+        "android_client_info": {
+          "package_name": "com.example.marvelchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1400559087-meabd7juq7cg1jnl7a2fmet2jn2692nq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marvelchallenge",
+            "certificate_hash": "23640686e78eff6a5d9ebe845f0f4f9f3a2e1356"
+          }
+        },
+        {
+          "client_id": "1400559087-gieobip9sd12jej2bjpn2807eh3bv3k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsvVjKTo1CpJvz8f8CrdMK0fzMTqwhC4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1400559087-gieobip9sd12jej2bjpn2807eh3bv3k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
