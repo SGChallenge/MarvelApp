@@ -15,14 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:ignore="UnusedAttribute">
-        <activity android:name=".app.ui.AuthActivity">
+        <activity android:name=".app.ui.AuthActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.ui.MainActivity"/>
+        <activity android:name=".app.ui.MainActivity" android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"
