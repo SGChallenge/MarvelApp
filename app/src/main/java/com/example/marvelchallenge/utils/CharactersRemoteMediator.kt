@@ -14,7 +14,7 @@ import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalPagingApi::class)
 class CharactersRemoteMediator(
-    val dao: MarvelHeroesDao,
+    private val dao: MarvelHeroesDao,
     private val service: MarvelService,
 ) : RemoteMediator<Int, CharacterPaged>() {
 

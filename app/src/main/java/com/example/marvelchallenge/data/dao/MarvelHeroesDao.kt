@@ -18,12 +18,6 @@ abstract class MarvelHeroesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun save(list: List<Character>)
 
-    @Query("SELECT * FROM Character")
-    abstract fun load(): PagingSource<Int, Character>
-
-    @Query("DELETE FROM Character")
-    abstract fun deleteAll()
-
     @Query("SELECT * FROM Character WHERE id = :id")
     abstract fun loadById(id: Int): LiveData<Character>
 
