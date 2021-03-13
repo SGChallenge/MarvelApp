@@ -70,8 +70,6 @@ data class ApiSuccessResponse<T>(
 
     companion object {
         private val LINK_PATTERN = Pattern.compile("<([^>]*)>[\\s]*;[\\s]*rel=\"([a-zA-Z0-9]+)\"")
-        private val PAGE_PATTERN = Pattern.compile("\\bpage=(\\d+)")
-        private const val NEXT_LINK = "next"
 
         private fun String.extractLinks(): Map<String, String> {
             val links = mutableMapOf<String, String>()
