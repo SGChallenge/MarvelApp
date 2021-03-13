@@ -5,6 +5,6 @@
 .idea/
 *.lock
 *.bin
-*.properties
+gradle.properties
 *.ser
 *.iml
