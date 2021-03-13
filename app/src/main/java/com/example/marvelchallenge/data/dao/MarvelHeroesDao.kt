@@ -31,7 +31,10 @@ abstract class MarvelHeroesDao {
     abstract fun savePaged(items: List<PagedCharacter>)
 
     @RewriteQueriesToDropUnusedColumns
-    @Query("SELECT * FROM page_character LEFT JOIN character ON id == character_id ORDER BY name ASC")
+    @Query(
+        "SELECT * FROM page_character LEFT JOIN character ON id == character_id " +
+            "ORDER BY name ASC"
+    )
     abstract fun loadPaged(): PagingSource<Int, CharacterPaged>
 
     @Query("DELETE FROM page_character")

@@ -5,7 +5,6 @@ import com.example.marvelchallenge.domain.model.ComicSummary
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import java.util.*
 
 class Converters {
 
@@ -16,10 +15,4 @@ class Converters {
 
     @TypeConverter
     fun saveComicSummary(list: List<ComicSummary>): String = Gson().toJson(list)
-
-    @TypeConverter
-    fun fromTimestamp(value: Long): Date = Date(value)
-
-    @TypeConverter
-    fun dateToTimestamp(date: Date): Long = date.time
 }

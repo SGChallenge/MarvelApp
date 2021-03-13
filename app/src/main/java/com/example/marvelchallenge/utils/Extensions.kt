@@ -9,7 +9,7 @@ import com.example.marvelchallenge.domain.model.Thumbnail
 import java.security.MessageDigest
 import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 
 fun ImageView.loadFromUrl(imageSize: String, thumbnail: Thumbnail) {
     Glide.with(this)

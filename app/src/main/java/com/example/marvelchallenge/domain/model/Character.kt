@@ -12,4 +12,3 @@ data class Character(
     @Embedded val thumbnail: Thumbnail,
     @Embedded val comics: ItemContainer?
 )
-
