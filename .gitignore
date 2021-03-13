@@ -6,5 +6,6 @@
 *.lock
 *.bin
 gradle.properties
+local.properties
 *.ser
 *.iml
