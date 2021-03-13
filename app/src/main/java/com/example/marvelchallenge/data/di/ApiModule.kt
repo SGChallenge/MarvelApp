@@ -21,7 +21,7 @@ object ApiModule {
     @Provides
     fun provideMarvelService(): MarvelService =
         Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl("https://gateway.marvel.com/v1/public/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(FlowCallAdapterFactory())
             .build()
